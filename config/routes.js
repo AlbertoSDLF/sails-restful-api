@@ -44,7 +44,10 @@ module.exports.routes = {
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
 
-  'POST /company/:companyId/person': 'PersonController.addPersonToCompany'
+  'POST /company/:companyId/employee': 'PersonController.addEmployeeToCompany',
+  'POST /company/:companyId/manager': 'PersonController.addManagerToCompany',
+  'DELETE /company/:companyId/employee/:personId': 'PersonController.removeEmployeeFromCompany',
+  'DELETE /company/:companyId/manager/:personId': 'PersonController.removeManagerFromCompany',
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

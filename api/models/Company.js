@@ -25,6 +25,7 @@ module.exports = {
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
     country: { model: 'country' },
+    employee: { collection: 'person', via: 'employee' },
     manager: { collection: 'person', via: 'manager' }
 
   },

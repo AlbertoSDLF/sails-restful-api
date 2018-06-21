@@ -28,6 +28,7 @@ module.exports = {
 
     nationality: { model: 'nationality' },
     country: { model: 'country' },
+    employee: { collection: 'company', via: 'employee' },
     manager: { collection: 'company', via: 'manager' }
 
   },
