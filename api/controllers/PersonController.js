@@ -6,6 +6,13 @@
  */
 
 module.exports = {
- 
+
+  addPersonToCompany: async function (request, response) {
+    var newPerson = await Person.create(request.body).fetch();
+    var companyId = request.param("companyId");
+    await Company.addToCollection(companyId, 'manager', newPerson.id);
+    response.send('{ "message": "Still in development" }');
+  },
+
 };
 
